@@ -37,7 +37,6 @@ const renderFoodInfo = food => {
         <li><i class="icon-check icons"></i> ${food.strIngredient2}</li>
         <li><i class="icon-check icons"></i> ${food.strIngredient3}</li>
         <li><i class="icon-check icons"></i> ${food.strIngredient4}</li>
-        <li><i class="icon-check icons"></i> ${food.strIngredient5}</li>
     </ul>
 
 `;
@@ -56,7 +55,7 @@ function getFood(mealId) {
     const displayFoods = foods => {
         const foodsDiv = document.getElementById('foods');
         if (foods != null) {
-            foods.forEach(food => {
+            foods.map(food => {
                 const foodDiv = document.createElement('div');
                 foodDiv.className = 'col-md-3';
                 const foodInfo = `
