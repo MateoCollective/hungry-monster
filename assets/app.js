@@ -3,6 +3,7 @@ const data_container = document.getElementById('foods');
 const searchBtn = document.getElementById('searchBtn');
 const warning = document.getElementById('warning');
 
+// Search Btn Click Function
 searchBtn.addEventListener('click', function () {
     const keyword = document.getElementById('keyword').value;
     data_container.innerHTML = '';
@@ -13,7 +14,7 @@ searchBtn.addEventListener('click', function () {
         warning.style.display = 'none';
     }
 });
-
+// Details for Foods
 const displayDetails = name => {
     const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${name}`;
     fetch(url)
@@ -23,25 +24,30 @@ const displayDetails = name => {
             console.log(data.meals[0]);
         });
 };
-
-const renderFoodInfo = food => {
+// Render Single Food Info
+const renderFoodInfo = (food) => {
+    // Get all ingredients from the object. Up to 20
+    const ingredients = [];
+    for (let i = 1; i <= 20; i++) {
+        if (food[`strIngredient${i}`]) {
+            ingredients.push(`${food[`strIngredient${i}`]} - ${food[`strMeasure${i}`]}`);
+        } else {
+            // Stop if there are no more ingredients
+            break;
+        }
+    }
     const foodDetailsDiv = document.getElementById('foodsDetails');
-
     foodDetailsDiv.innerHTML = `
     <img class="img-fluid rounded mb-4" src="${food.strMealThumb}" alt="">
     <h4>${food.strMeal}</h4>
     
     <h5 class="pt-3 pb-2"><i class="icon-fire icons"></i> Ingredients</h5>
     <ul class="list-unstyled mb-0">
-        <li><i class="icon-check icons"></i>${food.strMeasure1}, ${food.strIngredient1}</li>
-        <li><i class="icon-check icons"></i>${food.strMeasure2}, ${food.strIngredient2}</li>
-        <li><i class="icon-check icons"></i>${food.strMeasure3}, ${food.strIngredient3}</li>
-        <li><i class="icon-check icons"></i>${food.strMeasure4}, ${food.strIngredient4}</li>
+    ${ingredients.map((ingredient) => `<li><i class="icon-check icons"></i>${ingredient}</li>`).join('')}
     </ul>
-
 `;
 };
-
+// Foods Loop
 function getFood(mealId) {
     //const mainApi = `https://www.themealdb.com/api/json/v1/1/search.php?s=${keyword.value}`;
     const mainApi = `https://www.themealdb.com/api/json/v1/1/search.php?s=${mealId}`;
