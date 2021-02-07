@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hungry Monster API Practice Project by Monir H</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" integrity="sha512-QKC1UZ/ZHNgFzVKSAhV5v5j73eeL9EEN289eKAEFaAjgAiobVAnVv/AGuPbXsKl1dNoel3kNr6PYnSiTzVVBCw==" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" href="assets/style.css" media="all" />
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Hungry Moster</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Recipes</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+
+        <!-- Search Bar -->
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 mx-auto text-center">
+                    <form">
+                        <div class="inner-form">
+                            <div class="input-field first-wrap">
+                                <div class="svg-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                                    </svg>
+                                </div>
+                                <input id="keyword" type="text" placeholder="Search your meals.." />
+                            </div>
+                            <div class="input-field second-wrap">
+                                <button id="searchBtn" class="btn-search" type="button">SEARCH</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- End Search Bar -->
+
+        <!-- Foods Area  -->
+        <section class="container py-5">
+            <div id="foods" class="row g-3"></div>
+            <p id="warning" class="lead text-danger text-center">Please enter valid food 🍔 name.</p>
+        </section>
+        <!-- End Foods Area -->
+
+        <!-- Footer -->
+        <footer>
+            <p>Copyright &copy; 2021 All rights reserved | This template is made with <span class="icons icon-heart"></span> by <a href="http://monirh.com">Monir H</a></p>
+        </footer>
+        <!-- Footer -->
+
+        <!-- Details In Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Meals Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id="foodsDetails" class="modal-body"></div>
+                    <div class="modal-footer">
+                        <p>Created By <a href="http://monirh.com/">Monir H</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <script src="assets/app.js"></script>
+    </body>
+</html>

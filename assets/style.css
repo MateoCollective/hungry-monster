@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.2s;
+    color: #e74c3c;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* *******************
+* Search Bar Style
+**********************/
+
+.inner-form {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    /* box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15); */
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.inner-form .input-field {
+    height: 48px;
+}
+
+.inner-form .input-field input {
+    height: 100%;
+    background: transparent;
+    border: 0;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #000;
+}
+
+.inner-form .input-field input.placeholder {
+    color: #222;
+    font-size: 16px;
+}
+
+.inner-form .input-field input:-moz-placeholder {
+    color: #222;
+    font-size: 16px;
+}
+
+.inner-form .input-field input::-webkit-input-placeholder {
+    color: #222;
+    font-size: 16px;
+}
+
+.inner-form .input-field input:hover,
+.inner-form .input-field input:focus {
+    box-shadow: none;
+    outline: 0;
+}
+
+.inner-form .input-field.first-wrap {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #f1f1f1;
+}
+
+.inner-form .input-field.first-wrap input {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.inner-form .input-field.first-wrap .svg-wrapper {
+    min-width: 80px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.inner-form .input-field.first-wrap svg {
+    width: 25px;
+    height: 25px;
+    fill: #777;
+}
+
+.inner-form .input-field.second-wrap {
+    min-width: 130px;
+}
+
+@media screen and (max-width: 767px) {
+    .inner-form .input-field.second-wrap {
+        min-width: 100px;
+    }
+}
+.inner-form .input-field.second-wrap .btn-search {
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    font-size: 16px;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    background: #e74c3c;
+    transition: all 0.2s ease-out, color 0.2s ease-out;
+    font-weight: 300;
+}
+
+.inner-form .input-field.second-wrap .btn-search:hover {
+    background: #e74c3c;
+}
+
+.inner-form .input-field.second-wrap .btn-search:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+ul li {
+    padding: 5px 0;
+}
+
+.icon-check {
+    color: #e74c3c;
+    margin-right: 5px;
+}
+
+footer {
+    padding: 50px 30px;
+    text-align: center;
+}
+
+#warning {
+    display: none;
+}
