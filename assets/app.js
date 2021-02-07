@@ -33,10 +33,10 @@ const renderFoodInfo = food => {
     
     <h5 class="pt-3 pb-2"><i class="icon-fire icons"></i> Ingredients</h5>
     <ul class="list-unstyled mb-0">
-        <li><i class="icon-check icons"></i> ${food.strIngredient1}</li>
-        <li><i class="icon-check icons"></i> ${food.strIngredient2}</li>
-        <li><i class="icon-check icons"></i> ${food.strIngredient3}</li>
-        <li><i class="icon-check icons"></i> ${food.strIngredient4}</li>
+        <li><i class="icon-check icons"></i>${food.strMeasure1}, ${food.strIngredient1}</li>
+        <li><i class="icon-check icons"></i>${food.strMeasure2}, ${food.strIngredient2}</li>
+        <li><i class="icon-check icons"></i>${food.strMeasure3}, ${food.strIngredient3}</li>
+        <li><i class="icon-check icons"></i>${food.strMeasure4}, ${food.strIngredient4}</li>
     </ul>
 
 `;
